@@ -35,3 +35,10 @@ export const validateRegister = [
 
   validateRequest,
 ];
+
+export const validateLogin = [
+  body("email").isEmail().withMessage("Invalid Email"),
+  body("password").notEmpty().withMessage("Password is required"),
+
+  validateRequest,
+];

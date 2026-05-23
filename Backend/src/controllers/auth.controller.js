@@ -15,7 +15,7 @@ async function sendResponseToken(user, res, message) {
   res.cookie("token", token);
 
   res.status(201).json({
-    message: "User created successfully",
+    message: message,
     success: true,
     user: {
       id: user._id,
@@ -30,7 +30,7 @@ async function sendResponseToken(user, res, message) {
 export async function registerController(req, res) {
   const { email, contact, password, fullname, isSeller } = req.body;
 
-  const userAlreadyExists =await userModel.findOne({
+  const userAlreadyExists = await userModel.findOne({
     $or: [{ email }, { contact }],
   });
 
@@ -49,4 +49,28 @@ export async function registerController(req, res) {
   });
 
   await sendResponseToken(user, res, "user register successfully");
+}
+
+export async function loginController(req, res) {
+  const { email, password } = req.body;
+
+  const user = await userModel.findOne({
+    email,
+  });
+
+  if (!user) {
+    return res.status(404).json({
+      message: "email not registered",
+    });
+  }
+
+  const isMatch = await user.comparePassword(password);
+
+  if (!isMatch) {
+    return res.status(401).json({
+      message: "Incorrect password",
+    });
+  }
+
+  await sendResponseToken(user, res, "User Login Successfully");
 }

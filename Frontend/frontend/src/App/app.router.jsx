@@ -1,0 +1,12 @@
+import { createBrowserRouter } from "react-router";
+import Register from "../features/auth/Pages/Register"
+export const routes = createBrowserRouter([
+  {
+    path: "/",
+    element: <h1>Hello World</h1>,
+  },
+  {
+      path: "/register",
+      element:<Register/>
+  },
+]);

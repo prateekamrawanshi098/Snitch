@@ -31,7 +31,7 @@ export const validateRegister = [
     .withMessage("fullname cant be empty")
     .isLength({ min: 2 })
     .withMessage("name must conatcin atleast 2 character"),
-  body("role").isBoolean().withMessage("isSeller must be a boolean value"),
+  body("isSeller").isBoolean().withMessage("isSeller must be a boolean value"),
 
   validateRequest,
 ];

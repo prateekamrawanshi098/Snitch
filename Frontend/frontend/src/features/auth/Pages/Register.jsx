@@ -285,11 +285,13 @@ const Register = () => {
                   className="text-[11px] uppercase tracking-[0.15em] transition-colors duration-200"
                   style={{ color: formData.isSeller ? "#C9A96E" : "#7A6E63" }}
                 >
-                  Register as Seller
+                  Register as Seller        
                 </span>
               </label>
 
               {/* Sign Up Button */}
+
+                
               <button
                 type="submit"
                 className="w-full py-4 text-[11px] uppercase tracking-[0.25em] font-medium transition-all duration-300 mt-2"
@@ -332,6 +334,20 @@ const Register = () => {
               {/* <ContinueWithGoogle /> */}
 
               {/* Footer Link */}
+ 
+                <a className="flex justify-center text-[11px] uppercase tracking-[0.15em] transition-colors duration-200 
+                 " href="/api/auth/google"
+                 style={{
+                  backgroundColor: "#1b1c1a",
+                  color: "#fbf9f6",
+                  fontFamily: "'Inter', sans-serif",
+                }}
+                 >
+                  continue with google
+                  </a>
+
+
+
               <p
                 className="text-center text-[11px]"
                 style={{ color: "#B5ADA3" }}

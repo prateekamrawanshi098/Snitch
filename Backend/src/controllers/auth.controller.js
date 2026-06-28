@@ -74,3 +74,11 @@ export async function loginController(req, res) {
 
   await sendResponseToken(user, res, "User Login Successfully");
 }
+
+
+export const googleCallback = async (req, res) => {
+  console.log(req.user);
+
+  res.redirect("http://localhost:5173/")
+  
+}

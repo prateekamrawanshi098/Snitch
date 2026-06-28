@@ -10,13 +10,13 @@ const app = express();
 
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true,
-    methods: ["GET", "POST", "UPDATE", "DELETE"],
-  }),
-);
+// app.use(
+// //   cors({
+// //     origin: "http://localhost:5173",
+// //     credentials: true,
+// //     methods: ["GET", "POST", "UPDATE", "DELETE"],
+// //   }),
+// // );
 
 /**============Routes============================= */
 app.use("/api/auth", authRouter);

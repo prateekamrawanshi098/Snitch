@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
 const userSchema = new mongoose.Schema({
@@ -10,11 +10,13 @@ const userSchema = new mongoose.Schema({
   contact: {
     type: String,
     unique: true,
-    required: true,
+    required: false,
   },
   password: {
     type: String,
-    required: true,
+    required: function () {
+      return !this.googleId;
+    },
   },
   fullname: {
     type: String,
@@ -22,8 +24,12 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    emum: ["buyer", "seller"],
+    enum: ["buyer", "seller"],
     default: "buyer",
+  },
+  googleId: {
+    type: String,
+    required: false,
   },
 });
 

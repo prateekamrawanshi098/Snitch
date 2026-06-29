@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useAuth } from "../hook/useAuth";
 import { useNavigate } from "react-router";
+import ContinueWithGoogle from "../components/continueWithGoogle";
+
 
 const Register = () => {
   const { handleRegister } = useAuth();
@@ -335,16 +337,7 @@ const Register = () => {
 
               {/* Footer Link */}
  
-                <a className="flex justify-center text-[11px] uppercase tracking-[0.15em] transition-colors duration-200 
-                 " href="/api/auth/google"
-                 style={{
-                  backgroundColor: "#1b1c1a",
-                  color: "#fbf9f6",
-                  fontFamily: "'Inter', sans-serif",
-                }}
-                 >
-                  continue with google
-                  </a>
+               <ContinueWithGoogle />
 
 
 

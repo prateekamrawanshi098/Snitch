@@ -18,7 +18,7 @@ authRouter.get(
 
 authRouter.get(
   "/google/callback",
-  passport.authenticate("google", { session: false }),
+  passport.authenticate("google", { session: false ,failureRedirect:"http://localhost:5173/login"}),
   googleCallback
 );
 

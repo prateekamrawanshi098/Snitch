@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useAuth } from "../hook/useAuth";
 import { useNavigate } from "react-router";
+import ContinueWithGoogle from "../components/continueWithGoogle";
+
 
 const Login = () => {
   const { handleLogin } = useAuth();
@@ -294,11 +296,16 @@ const Login = () => {
                 >
                   or
                 </span>
+
+
                 <div
                   className="flex-1 h-px"
                   style={{ backgroundColor: "#e4e2df" }}
                 />
               </div>
+
+              <ContinueWithGoogle />
+
 
               {/* Footer Link */}
               <p

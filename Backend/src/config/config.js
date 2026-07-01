@@ -10,11 +10,15 @@ if (!process.env.JWT_SECRET) {
 }
 
 if (!process.env.GOOGLE_CLIENT_ID) {
-  throw new Error("CLIENT ID is not defined");
+  throw new Error("CLIENT ID is  undefined");
 }
 
 if (!process.env.GOOGLE_CLIENT_SECRET) {
-  throw new Error("CLIENT SECRET is defined");
+  throw new Error("CLIENT SECRET is undefined");
+}
+
+if (!process.env.IMAGEKIT_PRIVATE_KEY) {
+  throw new Error("IMAGEKIT_PRIVATE_KEY is  undefined");
 }
 
 export const config = {
@@ -22,4 +26,5 @@ export const config = {
   JWT_SECRET: process.env.JWT_SECRET,
   GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
   GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
+  IMAGEKIT_PRIVATE_KEY: process.env.IMAGEKIT_PRIVATE_KEY,
 };

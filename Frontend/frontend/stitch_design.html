@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SNITCH | Create New Product</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed-variant": "#5a4312",
+                        "secondary-fixed": "#ffdea4",
+                        "primary-fixed": "#e4e2df",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f5f3f0",
+                        "primary-fixed-dim": "#c7c6c3",
+                        "on-surface-variant": "#454743",
+                        "tertiary-container": "#221a12",
+                        "on-error": "#ffffff",
+                        "primary": "#000000",
+                        "on-surface": "#1b1c1a",
+                        "tertiary": "#000000",
+                        "inverse-surface": "#30312f",
+                        "on-tertiary-fixed": "#221a12",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e4e2df",
+                        "surface-tint": "#5e5e5c",
+                        "surface-dim": "#dbdad7",
+                        "surface-container": "#efeeeb",
+                        "secondary-container": "#fedb9b",
+                        "surface-container-high": "#eae8e5",
+                        "on-tertiary-container": "#8e8276",
+                        "on-error-container": "#93000a",
+                        "surface": "#fbf9f6",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#e4c285",
+                        "tertiary-fixed": "#f0e0d2",
+                        "on-background": "#1b1c1a",
+                        "inverse-primary": "#c7c6c3",
+                        "on-primary-fixed-variant": "#464744",
+                        "tertiary-fixed-dim": "#d3c4b7",
+                        "on-tertiary-fixed-variant": "#4f453b",
+                        "on-primary-fixed": "#1b1c1a",
+                        "background": "#fbf9f6",
+                        "surface-container-highest": "#e4e2df",
+                        "inverse-on-surface": "#f2f0ed",
+                        "surface-bright": "#fbf9f6",
+                        "outline-variant": "#c6c7c1",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline": "#767872",
+                        "on-secondary-fixed": "#261900",
+                        "on-secondary-container": "#795f2b",
+                        "primary-container": "#1b1c1a",
+                        "secondary": "#745a27",
+                        "on-primary-container": "#848481"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "unit": "4px",
+                        "stack-lg": "48px",
+                        "stack-md": "24px",
+                        "stack-sm": "12px",
+                        "margin-desktop": "64px"
+                    },
+                    fontFamily: {
+                        "body-md": ["inter", "sans-serif"],
+                        "display-lg-mobile": ["ebGaramond", "serif"],
+                        "label-sm": ["inter", "sans-serif"],
+                        "label-md": ["inter", "sans-serif"],
+                        "title-lg": ["inter", "sans-serif"],
+                        "display-lg": ["ebGaramond", "serif"],
+                        "headline-xl-mobile": ["ebGaramond", "serif"],
+                        "headline-xl": ["ebGaramond", "serif"],
+                        "body-lg": ["inter", "sans-serif"],
+                        "headline-md": ["ebGaramond", "serif"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "1.5", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .outline-text {
+            -webkit-text-stroke: 1px #e4e2df;
+            color: transparent;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-bottom-color: #1b1c1a !important;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #fbf9f6;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #1b1c1a;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md custom-scrollbar">
+<!-- Top Navigation Shell -->
+<header class="w-full bg-surface border-b border-outline-variant z-50">
+<div class="flex justify-between items-center h-16 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-headline-md text-3xl font-bold tracking-tight text-primary" href="#">Snitch.</a>
+<nav class="hidden md:flex items-center gap-4 text-on-surface-variant font-label-sm uppercase tracking-widest">
+<span class="hover:text-primary cursor-pointer transition-colors">Products</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-bold">Create New</span>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined cursor-pointer text-on-surface-variant hover:text-primary">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Ghost Banner -->
+<div class="relative w-full h-32 md:h-48 overflow-hidden flex items-center justify-center bg-surface select-none">
+<span class="font-display-lg italic text-[10rem] md:text-[18rem] outline-text whitespace-nowrap opacity-50 uppercase leading-none">
+        New Arrival New Arrival
+    </span>
+</div>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg min-h-screen">
+<div class="flex flex-col lg:flex-row gap-16">
+<!-- LEFT COLUMN (55%) -->
+<div class="lg:w-[55%] flex flex-col gap-14">
+<!-- Section 01: Identity -->
+<section class="flex flex-col gap-10">
+<div class="flex items-center justify-between border-b border-surface-variant pb-2">
+<span class="font-headline-md text-xl italic text-on-surface tracking-wide">01 — Identity</span>
+<span class="material-symbols-outlined text-outline-variant text-sm">info</span>
+</div>
+<div class="flex flex-col gap-12">
+<div class="w-full">
+<label class="block font-label-sm text-outline-variant uppercase mb-2">Product Title</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-headline-xl italic text-primary placeholder:text-outline-variant transition-all focus:ring-0" placeholder="The Midnight Velvet Blazer" type="text"/>
+</div>
+<div class="w-full">
+<label class="block font-label-sm text-outline-variant uppercase mb-2">Description</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-body-md text-primary placeholder:text-outline-variant transition-all focus:ring-0 resize-none" placeholder="A masterpiece of tailoring, crafted from the finest Italian silk-velvet..." rows="4"></textarea>
+</div>
+</div>
+</section>
+<!-- Section 02: Pricing -->
+<section class="flex flex-col gap-10">
+<div class="flex items-center justify-between border-b border-surface-variant pb-2">
+<span class="font-headline-md text-xl italic text-on-surface tracking-wide">02 — Pricing</span>
+</div>
+<div class="flex flex-col gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="w-full">
+<label class="block font-label-sm text-outline-variant uppercase mb-2">Amount</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-headline-xl text-primary placeholder:text-outline-variant transition-all focus:ring-0" oninput="document.getElementById('total-preview').innerText = '$' + (this.value || '0.00')" placeholder="0.00" type="number"/>
+</div>
+<div class="w-full">
+<label class="block font-label-sm text-outline-variant uppercase mb-2">Currency</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-headline-md text-primary appearance-none transition-all focus:ring-0 cursor-pointer">
+<option value="USD">USD — US Dollar</option>
+<option value="INR">INR — Indian Rupee</option>
+<option value="EUR">EUR — Euro</option>
+<option value="GBP">GBP — British Pound</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-sm text-outline-variant uppercase">Total Preview:</span>
+<span class="font-headline-md text-2xl text-on-surface" id="total-preview">$0.00</span>
+</div>
+</div>
+</section>
+<!-- Section 03: Actions -->
+<section class="flex flex-col gap-6 pt-10">
+<button class="w-full bg-primary-container text-on-primary font-label-md uppercase py-6 rounded tracking-[0.15em] transition-all hover:bg-black active:scale-[0.99] border-none">
+                    Publish Product
+                </button>
+<button class="w-full bg-transparent text-primary font-label-md uppercase py-2 rounded tracking-[0.1em] hover:underline transition-all">
+                    Save as Draft
+                </button>
+</section>
+</div>
+<!-- RIGHT COLUMN (45%) -->
+<aside class="lg:w-[45%]">
+<div class="sticky top-24 flex flex-col gap-8">
+<div class="flex items-end justify-between border-b border-surface-variant pb-2">
+<h3 class="font-headline-md text-2xl italic text-on-surface">Product Images</h3>
+<span class="font-label-sm text-outline-variant uppercase">0 / 7 max</span>
+</div>
+<!-- Primary Slot -->
+<div class="w-full aspect-[2/3] border border-outline-variant bg-surface-container-low flex flex-col items-center justify-center gap-4 cursor-pointer group transition-colors hover:bg-surface-container">
+<div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">add_a_photo</span>
+</div>
+<div class="text-center">
+<p class="font-label-md text-on-surface-variant uppercase tracking-widest">Upload Primary Cover</p>
+<p class="font-label-sm text-outline-variant mt-1 italic">High-res 2:3 Portrait Recommended</p>
+</div>
+</div>
+<!-- Secondary Slots Grid -->
+<div class="grid grid-cols-3 gap-4">
+<div class="aspect-square border border-outline-variant bg-surface-container-lowest flex items-center justify-center cursor-pointer hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">add</span>
+</div>
+<div class="aspect-square border border-outline-variant bg-surface-container-lowest flex items-center justify-center cursor-pointer hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">add</span>
+</div>
+<div class="aspect-square border border-outline-variant bg-surface-container-lowest flex items-center justify-center cursor-pointer hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">add</span>
+</div>
+<div class="aspect-square border border-outline-variant bg-surface-container-lowest flex items-center justify-center cursor-pointer hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">add</span>
+</div>
+<div class="aspect-square border border-outline-variant bg-surface-container-lowest flex items-center justify-center cursor-pointer hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">add</span>
+</div>
+<div class="aspect-square border border-outline-variant bg-surface-container-lowest flex items-center justify-center cursor-pointer hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">add</span>
+</div>
+</div>
+<!-- Tips -->
+<div class="p-8 bg-surface-container-low border border-surface-variant">
+<p class="font-headline-md text-lg italic text-on-surface mb-3 tracking-wide">Editor's Note</p>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                        Ensure lighting is natural and the background is neutral to maintain the SNITCH aesthetic. We recommend at least 3 detail shots showing texture and craftsmanship.
+                    </p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full bg-surface border-t border-outline-variant mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center py-stack-md px-margin-desktop max-w-container-max mx-auto gap-8">
+<span class="font-headline-md text-4xl text-primary font-bold">SNITCH</span>
+<div class="flex gap-8 font-label-sm text-on-surface-variant uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<p class="font-label-sm text-outline-variant uppercase tracking-widest">
+            © 2024 SNITCH EDITORIAL. ALL RIGHTS RESERVED.
+        </p>
+</div>
+</footer>
+<script>
+    // Simple micro-interaction for input states
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            input.previousElementSibling?.classList.add('text-primary');
+            input.previousElementSibling?.classList.remove('text-outline-variant');
+        });
+        input.addEventListener('blur', () => {
+            input.previousElementSibling?.classList.remove('text-primary');
+            input.previousElementSibling?.classList.add('text-outline-variant');
+        });
+    });
+
+    // Basic image upload slot simulation
+    const slots = document.querySelectorAll('.aspect-square, .aspect-\\[2\\/3\\]');
+    slots.forEach(slot => {
+        slot.addEventListener('click', () => {
+            console.log('Opening file gallery...');
+        });
+    });
+</script>
+</body></html>

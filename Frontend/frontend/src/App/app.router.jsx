@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import Register from "../features/auth/Pages/Register";
 import Login from "../features/auth/Pages/Login";
-import CreateProduct from "../features/pages/CreateProduct";
+import CreateProduct from "../features/products/pages/CreateProduct";
 
 export const routes = createBrowserRouter([
   {
